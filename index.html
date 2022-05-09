@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>A Blockly-based Score Language</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/bulma">
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+          <h1 class="title">
+            Scoring Language
+          </h1>
+          <div class="columns">
+            <div class="column is-two-thirds">
+              <div class="blockly-editor">
+                <div id="blocklyDiv" style="height: 480px;">
+                  <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+                    <block type="condition_block"></block>
+                    <block type="features_list">
+                      <field name="feature">AGE</field>
+                    </block>
+                    <block type="has_tag">
+                      <field name="tag_value">0</field>
+                    </block>
+                    <block type="math_number">
+                      <field name="NUM">0</field>
+                    </block>
+                  </xml>
+                  <xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none">
+                    <block type="scoring_block" id="6t)r:LY:Sm~!NcLp70@p" x="38" y="12">
+                      <field name="minimum_score">0</field>
+                    </block>
+                  </xml>              
+                </div>
+              </div>              
+            </div>
+            <div class="column is-one-third">
+              <button class="button is-primary" id="test">Test</button>
+              <div class="notification" id="result">
+
+              </div>
+            </div>       
+        </div>       
+        <h2 class="title">
+          User Data
+        </h2>                             
+        <div class="columns">
+          <div class="column">
+            <div class="blockly-editor">
+              <div id="blocklyUser" style="height: 200px;">
+                <xml xmlns="https://developers.google.com/blockly/xml" id="userToolbox" style="display: none">
+                  <block type="block_tag">
+                    <field name="INPUT_TAG">default</field>
+                  </block>
+                </xml>
+                <xml xmlns="https://developers.google.com/blockly/xml" id="userWorkspace" style="display: none">
+                  <block type="user_block" id="?OCI|E)9#uT!-9#sYHBo" x="38" y="13">
+                    <field name="SALES">0</field>
+                    <field name="CLICKRATE">0</field>
+                    <field name="AGE">0</field>
+                  </block>
+                </xml>              
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  <script src="https://unpkg.com/blockly"></script>
+  <script src="scripts/scoring_blocks.js"></script>
+  <script src="scripts/main.js"></script>
+
+</body>
+</html>
